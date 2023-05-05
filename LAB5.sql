@@ -25,4 +25,4 @@ FROM cities
 WHERE region IN (SELECT uuid
 FROM regions 
 WHERE area_quantity <=5)
-AND population > 150000 AND population < 500000;
+AND population NOT BETWEEN 150000 AND 500000;
